@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+/*CONFIGURAÇÃO GERAL DO CORPO DA PÁGINA*/
+
+body {
+    margin: 0 auto;
+    font-family: "Century Ghotic", sans-serif;
+}
+
+/*LAYOUT GERAL*/
+
+/*CABEÇALHO*/
+
+header{
+    height: 120px;
+    background-color: #008eb6;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+}
+
+header img{
+    float: left;
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+}
+
+header h1{
+    float: left;
+    margin: 30px 0 15px 30px;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+/*MENU*/
+
+nav{
+    clear: both;
+    width: 70%;
+    display: inline-block;
+    margin: 0px auto;
+}
+
+nav a{
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav .opcao{
+    float: left;
+    width: 19%;
+    background-color: #005f89;
+    margin: 0 0.5%;
+    font-size: 16px;
+}
+
+nav .opcao:hover{
+    background-color: #83afd3;
+}
+
+/*DROPDOWN BASEADO EM 23SCHOOL - HTTPS://WWW.W3SCHOOL.COM/CSS/CSS_DROPDOWNS.ASP*/
+
+
+/*USADO PARA POSICIONAR O CONTEUDO DROPDOWN*/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+/*CONTEUDO DROPDOWN (OCULTO POR PADRÃO)*/
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #005f89;
+    z-index: 1;
+    width: 100%;
+}
+
+
+/*LINKS DENTRO DO DROPDOWN*/
+
+.dropdown-content a {
+    display: block;
+}
+
+/*DROPDOWN BASEADO EM 23SCHOOL - HTTPS://WWW.W3SCHOOL.COM/CSS/CSS_DROPDOWNS.ASP*/
+
+
+/*USADO PARA POSICIONAR O CONTEUDO DROPDOWN*/
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+/*CONTEUDO DROPDOWN (OCULTO POR PADRÃO)*/
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #005f89;
+    z-index: 1;
+    width: 100%;
+}
+
+
+/*LINKS DENTRO DO DROPDOWN*/
+
+.dropdown-content a {
+    display: block;
+}
+
+
+/*MUDAR COR DOS LINKS DROPDOWN AO PASSAR O MOUSE*/
+
+.dropdown-content a:hover {
+    background-color: #83afd3;
+}
+
+
+/*MOSTRAR O MENU DROPDOWN MENU AO PASSAR O MOUSE*/
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*SEÇÃO*/
+
+section {
+    clear: both;
+    min-height: 460px;
+    width: 100%;
+    margin-top: 0px;
+}
+
+
+/*RODAPÉ*/
+
+footer {
+    background-color: #005f89;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}

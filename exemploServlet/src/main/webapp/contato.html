@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<form action="insereContato" name="fmrcontato" onsubmit="return validaContato()">
+		<fieldset>
+			<legend>Contato</legend>
+			<div class=>
+				<label>Nome:</label>
+				<input type="text" name="txtNome" id="txtNome"></input>
+			</div>
+			<div>
+				<label>Endereço:</label>
+				<input type="text" name="txtEnd" id="txtEnd"></input>
+			</div>
+			<div>
+				<label>Telefone:</label>
+				<input type=tel name="txtFone" id="txtFone"></input>
+			</div>
+			<div>
+				<input type="submit" name="btnSubmit" id="btnSubmit">
+				<button>Limpar</button>
+			</div>
+			<table>
+				<tr>
+					<td></td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+</body>
+</html>
+<script>
+
+	function validaContato() {
+	    if(document.fmrcontato.txtNome.value == ""){
+	        alert('Preencha o campo Nome corretamente.')
+	        document.fmrcontato.txtNome.focus();
+	        return false;
+	    }
+	
+	    if((document.fmrcontato.txtFone.value == "")){
+	        alert('Preencha o campo telefone corretamente.')
+	        document.fmrcontato.txtFone.focus();
+	        return false;
+	    }
+	
+	    if((document.fmrcontato.txtEnd.value == "")){
+	        alert('Preencha o campo endereço corretamente.')
+	        document.fmrcontato.txtEnd.focus();
+	        return false;
+	    }
+
+	    return true;
+	}
+</script>
