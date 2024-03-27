@@ -1,9 +1,8 @@
 INDEX VERSION 1.4+C:\Users\thiag\Desktop\WorkspaceTrilhaWeb\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-3555914522.index
 414085062.index
-4038003407.index
 3118655225.index
 1149777348.index
-322944043.index
 2905731152.index
 2940674839.index
+322944043.index
+4038003407.index
