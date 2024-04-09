@@ -25,7 +25,7 @@ public class MarcaRest extends UtilRest {
 			List<Marca> listaMarcas = new ArrayList<Marca>();
 			
 			Conexao conec = new Conexao();
-			//Connection conexao = conec.abrirConexao();
+			Connection conexao = conec.abrirConexao();
 			JDBCMarcaDAO jdbcMarca = new JDBCMarcaDAO(conexao);
 			listaMarcas = jdbcMarca.buscar();
 			conec.fecharConexao();	
