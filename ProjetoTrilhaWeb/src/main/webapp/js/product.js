@@ -65,7 +65,7 @@ $(document).ready(function() {
 			$.ajax({
 				type: "POST",
 				url: COLDIGO.PATH + "produto/inserir",
-				data: JSON.stringfy(produto),
+				data: JSON.stringify(produto),
 				success: function(msg){
 					COLDIGO.exibirAviso(msg);
 					$("#addProduto").trigger("reset");
