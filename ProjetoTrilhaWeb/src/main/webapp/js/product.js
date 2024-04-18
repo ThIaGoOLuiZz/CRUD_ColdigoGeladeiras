@@ -76,4 +76,25 @@ $(document).ready(function() {
 			});
 		}
 	}
+	
+	//BUSCA NO BD E EXIBE OS PRODUTOS QUE ATENDAM À SOLICITAÇÃO DO USUARIO
+	COLDIGO.produto.buscar = function(){
+		var valorBusca = $("#campoBuscaProduto").val();
+		
+		$.ajax({
+			type: "GET",
+			url: COLDIGO.PATH + "produto/buscar",
+			data: "valorBusca=" + valorBusca,
+			success: function(dados){
+				dados = JSON.parse(dados);
+				console.log(dados);
+			},
+			error: function(info){
+				COLDIGO.exibirAviso("Erro ao consultar os contatos: " + info.status + " - " + info.statusText);
+			}
+		});
+	};
+	
+	//EXECUTA A FUNÇÃO DE BUSCA AO CARREGAR A PAGINA
+	COLDIGO.produto.buscar();
 });
