@@ -87,12 +87,48 @@ $(document).ready(function() {
 			data: "valorBusca=" + valorBusca,
 			success: function(dados){
 				dados = JSON.parse(dados);
-				console.log(dados);
+				$("#listaProdutos").html(COLDIGO.produto.exibir(dados));
+
 			},
 			error: function(info){
 				COLDIGO.exibirAviso("Erro ao consultar os contatos: " + info.status + " - " + info.statusText);
 			}
 		});
+	};
+	
+	COLDIGO.produto.exibir = function(listaDeProdutos){
+		var tabela = "<table class='tabelaBusca'>" +
+		"<tr>" +
+		"<th>Categoria</th>" +
+		"<th>Marca</th>" +
+		"<th>Modelo</th>" +
+		"<th>Cap.(1)</th>" +
+		"<th>Valor</th>" +
+		"<th class='acoes'>Ações</th>" +
+		"</tr>";
+		
+		if(listaDeProdutos != undefined && listaDeProdutos.length > 0){
+			
+			for (var i=0; i<listaDeProdutos.length; i++){
+				tabela += "<tr>" +
+						"<td>" + listaDeProdutos[i].categoria + "</td>" +
+						"<td>" + listaDeProdutos[i].marcaNome + "</td>" +
+						"<td>" + listaDeProdutos[i].modelo + "</td>" +
+						"<td>" + listaDeProdutos[i].capacidade + "</td>" +
+						"<td>R$" + COLDIGO.formatarDinheiro(listaDeProdutos[i].valor) + "</td>" +
+						"<td>" +
+							//<a><img src='../../imgs/edit.png' alt='Editar registro'></a>" +
+							//"<a><img src='../../imgs/delete.png' alt='Excluir registro'></a>" +
+						"</td>" +
+						"</tr>"
+			}
+			
+		}else if(listaDeProdutos == ""){
+			tabela += "<tr><td colspan='6'>Nenhum registro encontrado</td></tr>";
+		}
+		tabela += "</table>";
+		
+		return tabela;
 	};
 	
 	//EXECUTA A FUNÇÃO DE BUSCA AO CARREGAR A PAGINA

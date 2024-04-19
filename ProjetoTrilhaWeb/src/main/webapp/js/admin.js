@@ -3,6 +3,10 @@ COLDIGO = new Object();
 
 $(document).ready(function() {
 	
+	COLDIGO.formatarDinheiro = function(valor){
+		return valor.toFixed(2).replace('.',',').replace(/(\d)(?=(\d{3})+\,)/g, "$1.");
+	}
+	
 	//CRIA UMA CONSTANTE COM O VALOR DA URI RAIZ DO REST
 	COLDIGO.PATH = "/ProjetoTrilhaWeb/rest/";
 	

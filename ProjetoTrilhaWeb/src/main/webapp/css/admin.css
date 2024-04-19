@@ -216,18 +216,18 @@ section h3 {
 
 /*TABELA DE REGISTROS*/
 
-.listaRegistros{
+.listaRegistros, .tabelaBusca{
 	margin-bottom: 10px;
 }
 
-.listaRegistros table{
+.listaRegistros table, .tabelaBusca table{
 	border: 1px solid #000;
 	border-collapse: collapse;
 	margin: 0 auto;
 	min-width: 50%;
 }
 
-.listaRegistros table th{
+.listaRegistros table th, .tabelaBusca table th{
 	text-align: center;
 	font-size: 18px;
 	font-weight: bold;
@@ -236,20 +236,20 @@ section h3 {
 	border: transparent;
 }
 
-.listaRegistro tr, .listaRegistro td, .listaRegistro th{
+.listaRegistro tr, .listaRegistro td, .listaRegistro th, .tabelaBusca tr, .tabelaBusca td, .tabelaBusca th{
     border: 1px solid #B0C4DE;
     padding: 0px 5px;
 }
 
-.listaRegistro tr, .listaRegistro td{
+.listaRegistro tr, .listaRegistro td, .tabelaBusca tr, .tabelaBusca td{
     font-size: 16px;
 }
 
-.listaRegistro tr:nth-child(even){
+.listaRegistro tr:nth-child(even), .tabelaBusca tr:nth-child(even){
     background-color: #b1ccf5;
 }
 
-.listaRegistro tr:nth-child(odd){
+.listaRegistro tr:nth-child(odd), .tabelaBusca tr:nth-child(odd){
     background-color: #b1ccf5;
 }
 
@@ -257,7 +257,7 @@ section h3 {
     width: 70px;
 }
 
-.listaRegistro table img{
+.listaRegistro table img, .tabelaBusca table img{
     padding: 0 5px;
     width: 20px;
     height: 20px;
