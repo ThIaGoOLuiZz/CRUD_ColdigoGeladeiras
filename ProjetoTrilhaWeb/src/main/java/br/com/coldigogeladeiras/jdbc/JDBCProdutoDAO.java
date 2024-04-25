@@ -1,5 +1,3 @@
-//teste
-
 package br.com.coldigogeladeiras.jdbc;
 
 import java.sql.Connection;
